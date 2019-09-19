@@ -15,10 +15,25 @@ export class UserService {
   }
 
   createOrUpdate(user: User){
+    
+
+    let config = {
+      headers: {
+        "Content-Type": "application/json"
+        }
+      }
+
+
+    console.log("CHEGOU_AQUI_11")
+
     if(user.id != null && user.id != ''){
+      console.log("CHEGOU_AQUI_1", + user.id +' '+ user.email + ' ' + user.password + ' ' + user.profile);
       return this.http.put(`${HELP_DESK_API}/api/user`, user);
+
     }else{
-      return this.http.post(`${HELP_DESK_API}/api/user`, user);
+
+      console.log("CHEGOU_AQUI_2", + user.id +' '+ user.email + ' ' + user.password + ' ' + user.profile);
+      return this.http.post(`${HELP_DESK_API}/api/user`, user, config);
     }
   }
 

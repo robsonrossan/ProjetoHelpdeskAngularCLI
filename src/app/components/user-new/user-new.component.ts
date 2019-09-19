@@ -16,7 +16,7 @@ export class UserNewComponent implements OnInit {
 
 
 @ViewChild('form', { static: true }) static: ElementRef<HTMLDivElement>;
-//@ViewChild('form') form;
+//@ViewChild('form');
 form: NgForm;
 
 user = new User('','','','');
