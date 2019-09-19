@@ -22,4 +22,9 @@ export class AppComponent {
     );
   }
 
+  showContentWrapper(){
+    return {
+      'content-wrapper': this.shared.isLoggedIn()
+    }
+  }
 }
