@@ -33,10 +33,23 @@ export class UserListComponent implements OnInit {
   }
 
   findAll(page:number,count:number){
+    
+    console.log('LOG_SERVICO_TESTANDO');
+
     this.userService.findAll(page,count).subscribe((responseApi:ResponseApi) => {
         this.listUser = responseApi['data']['content'];
+
+        console.log('LOG_SERVICO_TESTANDO_1');
+
         this.pages = new Array(responseApi['data']['totalPages']);
-    } , err => {
+        
+        console.log('LOG_SERVICO_TESTANDO_2');
+
+    } 
+    , err => {
+    
+      console.log('LOG_SERVICO_TESTANDO_3');
+
       this.showMessage({
         type: 'error',
         text: err['error']['errors'][0]

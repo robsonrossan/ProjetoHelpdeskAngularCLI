@@ -15,8 +15,7 @@ import { ResponseApi } from 'src/app/model/Response-api';
 export class UserNewComponent implements OnInit {
 
 
-@ViewChild('form', { static: true }) static: ElementRef<HTMLDivElement>;
-//@ViewChild('form');
+@ViewChild("form",null)
 form: NgForm;
 
 user = new User('','','','');
