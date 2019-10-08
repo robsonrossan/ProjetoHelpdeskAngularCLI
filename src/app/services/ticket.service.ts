@@ -31,7 +31,7 @@ export class TicketService {
     return this.http.delete(`${HELP_DESK_API}/api/ticket/${id}`);
   }
 
-  findByparams(page:number, count:number, assignedToMe:boolean, t:Ticket){
+  findByParams(page:number, count:number, assignedToMe:boolean, t:Ticket){
     t.number = t.number == null ? 0 : t.number; 
     t.title = t.title == '' ? 'uninformed' : t.title; // if ternario: verificando se o titulo esta vazio. se estiver seta "uninformed"
     t.status = t.status == '' ? 'uninformed' : t.status;

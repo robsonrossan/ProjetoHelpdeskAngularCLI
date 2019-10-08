@@ -20,6 +20,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { DialogService } from '../app/Dialog.service';
 import { TicketNewComponent } from './components/ticket-new/ticket-new.component';
 import { TicketService } from './services/ticket.service';
+import { TicketListComponent } from './components/ticket-list/ticket-list.component';
 
 
 
@@ -33,7 +34,8 @@ import { TicketService } from './services/ticket.service';
     LoginComponent,
     UserNewComponent,
     UserListComponent,
-    TicketNewComponent
+    TicketNewComponent,
+    TicketListComponent
   ],
   imports: [
     BrowserModule,

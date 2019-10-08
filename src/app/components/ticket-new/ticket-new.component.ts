@@ -48,8 +48,6 @@ export class TicketNewComponent implements OnInit {
   register(){
     this.message = {};
     this.ticketService.createOrUpdate(this.ticket).subscribe((responseApi:ResponseApi) => {
-      
-      console.log("DEPOIS_EXECUTOU_SERVICE");
       this.ticket = new Ticket('',0,'','','','',null,null,'',['']);
         let ticket : Ticket = responseApi.data;
         this.form.resetForm();
